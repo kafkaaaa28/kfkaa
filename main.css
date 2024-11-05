@@ -1,0 +1,687 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  transition: background-color 1s ease;
+  background-color: #808080;
+  color: black;
+}
+.dark-mode {
+  background-color: #000000; /* Warna latar belakang untuk dark mode */
+  color: white; /* Warna teks untuk dark mode */
+}
+.dark-mode .navbar {
+  background-color: #1c1c1c; /* Warna navbar untuk dark mode */
+}
+.dark-mode button {
+  color: white; /* Warna teks tombol untuk dark mode */
+}
+.bg-jepang {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(128, 128, 128, 1) 100%);
+}
+.bg-jepang2 {
+  transition: background-color 1s ease;
+  background: rgb(128, 128, 128);
+  background: linear-gradient(0deg, rgba(128, 128, 128, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+.dark-mode .text-about {
+  color: black;
+  transition: color 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Bayangan teks */
+}
+.dark-mode .bg-jepang {
+  transition: background-color 1s ease;
+  background: rgb(128, 128, 128);
+  background: linear-gradient(0deg, rgba(128, 128, 128, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+.dark-mode .bg-jepang2 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(128, 128, 128, 1) 100%);
+}
+.bg-about {
+  background-color: black;
+}
+.dark-mode .bg-about {
+  background-color: #808080;
+}
+.dark-mode button a {
+  color: white; /* Warna teks tombol untuk dark mode */
+}
+.dark-mode button a:hover {
+  color: white; /* Warna teks tombol untuk dark mode */
+}
+.text-me {
+  color: white;
+}
+.dark-mode .text-me {
+  color: black;
+}
+.dark-mode a span {
+  color: white; /* Warna teks tombol untuk dark mode */
+}
+.dark-mode .gojo-image {
+  filter: drop-shadow(1rem 1rem 0.4rem rgba(235, 0, 0, 0.5));
+}
+.dark-mode .geto-image {
+  filter: drop-shadow(1rem 1rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+.dark-mode .text-second {
+  color: rgb(255, 0, 0);
+}
+.dark-mode .text.text-second:before {
+  background-color: black;
+  transition: background-color 1s ease;
+}
+
+@font-face {
+  font-family: 'JujutsuKaisen';
+  src: url('Qetod.ttf') format('truetype'); /* Ganti dengan path ke file font Anda */
+}
+.porto {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  text-transform: uppercase;
+  color: grey;
+}
+.porto .folio {
+  padding: 0 0.5em 0.25em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.porto .folio:hover {
+  color: #fffcfc;
+}
+.porto .folio:before {
+  content: '';
+  position: absolute;
+  inset: calc(100% - 3px) 0 0 0; /* 3px = the thickness */
+  background: rgb(251, 0, 0); /* the color */
+  scale: 0 1;
+  transition: 0.3s, translate 0s 0.3s;
+}
+.porto:hover .folio:before {
+  scale: 1;
+}
+.porto .folio:hover:before {
+  translate: 0;
+  transition: 0.3s;
+}
+.porto:hover .folio:has(~ .folio:hover):before {
+  translate: 100% 0;
+  transition: 0.2s 0.2s, scale 0s 0.4s;
+}
+.porto:hover .folio:hover ~ .folio:before {
+  translate: -100% 0;
+  transition: 0.2s 0.2s, scale 0s 0.4s;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  text-transform: uppercase;
+  color: grey;
+}
+ul button {
+  padding: 0 0.5em 0.25em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.ul-text .button-text:hover {
+  color: white;
+}
+ul button:before {
+  content: '';
+  position: absolute;
+  inset: calc(100% - 3px) 0 0 0; /* 3px = the thickness */
+  background: rgb(255, 2, 2); /* the color */
+  scale: 0 1;
+  transition: 0.3s, translate 0s 0.3s;
+}
+ul:hover button:before {
+  scale: 1;
+}
+ul button:hover:before {
+  translate: 0;
+  transition: 0.3s;
+}
+ul:hover button:has(~ button:hover):before {
+  translate: 100% 0;
+  transition: 0.2s 0.2s, scale 0s 0.4s;
+}
+ul:hover button:hover ~ button:before {
+  translate: -100% 0;
+  transition: 0.2s 0.2s, scale 0s 0.4s;
+}
+.slide-in-fwd-right {
+  -webkit-animation: slide-in-fwd-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-fwd-right 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-in-fwd-right {
+  0% {
+    -webkit-transform: translateZ(-1400px) translateX(1000px);
+    transform: translateZ(-1400px) translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateX(0);
+    transform: translateZ(0) translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-right {
+  0% {
+    -webkit-transform: translateZ(-1400px) translateX(1000px);
+    transform: translateZ(-1400px) translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateX(0);
+    transform: translateZ(0) translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+.text-pop-up-top {
+  -webkit-animation: text-pop-up-top 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: text-pop-up-top 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    text-shadow: 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+.pulsate-bck {
+  -webkit-animation: pulsate-bck 1s ease-in-out infinite both;
+  animation: pulsate-bck 1s ease-in-out infinite both;
+}
+
+@-webkit-keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.input-nama::placeholder {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.dark-mode .input-nama::placeholder {
+  color: white;
+}
+.h1 {
+  text-shadow: 2px 2px 4px rgba(2, 2, 2, 0.7);
+}
+.dark-mode .h1 {
+  text-shadow: 7px 5px 5px rgba(248, 3, 3, 0.7);
+}
+.gojo-image {
+  filter: drop-shadow(1rem 1rem 0.4rem rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease;
+  width: 250px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.gojo-image:hover {
+  transform: scale(1.05);
+}
+.geto-image {
+  filter: drop-shadow(1rem 1rem 0.4rem rgba(235, 0, 0, 0.5));
+  transition: transform 0.3s ease;
+  width: 210px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+.luar {
+  overflow: hidden;
+}
+.luar .text {
+  position: relative;
+}
+
+.text.text-second:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+  border-left: 2px solid red;
+  transition: background-color 1s ease;
+  animation: animate 4s steps(12) infinite;
+}
+@keyframes animate {
+  40%,
+  60% {
+    left: calc(100% + 4px);
+  }
+  100% {
+    left: 0%;
+  }
+}
+.slide-in-bottom {
+  -webkit-animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400% 0;
+  }
+}
+
+.glow-border {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.glow-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, rgb(148, 0, 0), black, rgb(2, 2, 130));
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.75;
+  border-radius: 10px;
+  animation: glowing 5s linear infinite;
+}
+.foto1-image {
+  width: 300px; /* Atur lebar tetap */
+  height: auto; /* Sesuaikan tinggi agar proporsional */
+  max-width: 100%; /* Tidak lebih dari lebar kolom */
+  object-fit: contain; /* Memastikan gambar tidak terdistorsi */
+}
+.text-about {
+  color: white;
+  text-align: justify;
+  transition: color 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.7);
+}
+
+.full-divider {
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  height: 3rem; /* Sesuaikan tinggi sesuai preferensi */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; /* No margin */
+  padding: 0; /* No padding */
+  left: 50%; /* Fix for horizontal overflow */
+  transform: translateX(-50%); /* Centering adjustment */
+}
+
+.divider-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  background-color: white; /* Sesuaikan dengan background halaman */
+  padding: 0 10px;
+  z-index: 1; /* Pastikan teks di atas garis */
+}
+
+/* Line behind the text with increased width */
+.full-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  border-top: 4px solid #333; /* Lebar garis ditambah */
+  z-index: 0; /* Pastikan garis di bawah teks */
+}
+.mt-6 {
+  margin-top: 8rem !important;
+}
+.gradient-divider {
+  height: 100px; /* Tinggi pemisah */
+}
+#carouselExample .carousel-inner .carousel-item {
+  transition: transform 1s ease-in-out; /* Durasi transisi yang lebih smooth */
+}
+
+/* Jika ingin mengatur hover button lebih halus */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  opacity: 0.8;
+}
+#carouselExample .carousel-inner .carousel-item {
+  transition: transform 1s ease-in-out;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.9), 0 0 30px rgba(255, 0, 0, 0.7), 0 0 40px rgba(255, 0, 0, 0.5);
+  }
+}
+
+.glow-card {
+  transition: transform 1s ease;
+  position: relative;
+  filter: drop-shadow(20px 10px 26px #fdfdfd);
+}
+.dark-mode .glow-card {
+  filter: drop-shadow(20px 15px 26px #ff0000);
+}
+.glow-card:hover {
+  filter: drop-shadow(20px 15px 26px #ff0000);
+  transform: scale(1.05);
+  transition: transform 1s ease;
+}
+.text-focus-in {
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.text-blur-out {
+  -webkit-animation: text-blur-out 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-blur-out 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@-webkit-keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+  }
+}
+@keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+  }
+}
+
+.bungkus .card {
+  position: relative;
+  width: 225px;
+  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  border-radius: 4px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.bungkus .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+.bungkus .card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+  z-index: 1;
+}
+.percent {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px #000;
+  background: #222;
+  z-index: 1000;
+}
+.percent .num {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.percent .num h2 {
+  color: #777;
+  font-weight: 700;
+  font-size: 40px;
+  transition: 0.5s;
+}
+.card {
+  filter: drop-shadow(20px 15px 26px #f4f4f4);
+}
+.dark-mode .card {
+  filter: drop-shadow(20px 15px 26px #ff0000);
+}
+.card:hover {
+  filter: drop-shadow(20px 15px 26px #ff0000);
+}
+.card:hover .percent .num h2 {
+  color: #fff;
+  font-size: 60px;
+}
+.percent .num h2 span {
+  color: #777;
+  font-size: 24px;
+  transition: 0.5s;
+}
+.card:hover .percent .num h2 span {
+  color: #fff;
+}
+.text {
+  position: relative;
+  color: #777;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.card:hover .text {
+  color: #fff;
+}
+svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  z-index: 1000;
+}
+svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #191919;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+svg circle:nth-child(2) {
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+.card:nth-child(1) svg circle:nth-child(2) {
+  stroke: #ff0000;
+}
+.tengah {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* @media (max-width: 1484px) {
+  .vertical-card {
+    flex-direction: column;
+  }
+} */
