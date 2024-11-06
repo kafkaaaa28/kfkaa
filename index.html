@@ -50,7 +50,7 @@
     <!-- Navbar End -->
 
     <!-- Hero Section -->
-    <div class="container-fluid mt-5 pt-5 px-5 awal" id="home" style="min-height: 100vh">
+    <div class="container-fluid mt-5 pt-5 px-5 awal" id="home" style="min-height: 70vh">
       <div class="row align-items-center">
         <button class="btn btn-outline-danger fw-bold mb-3" style="font-family: jujutsukaisen; color: dak-mode" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
           CHATBOT
@@ -79,7 +79,7 @@
         </div>
         <div class="d-flex align-items-center justify-content-center">
           <input class="input-nama text-light fw-bold bg-dark form-control w-50 mb-3" id="inputnama" type="text" placeholder="WHO ARE YOU" aria-label="default input example" />
-          <button type="button" class="btn btn-outline-dark mb-3 mx-2" onclick="nama()">CLICK</button>
+          <button type="button" class="btn btn-danger text-dark mb-3 mx-2" onclick="nama()">CLICK</button>
         </div>
         <div>
           <h1 class="h1" id="h1"></h1>
@@ -87,8 +87,8 @@
         <div class="col-lg-6 text-start luar" style="font-family: Arial, Helvetica, sans-serif">
           <h3 class="fs-4 mb-5 fw-bold">HELLO IT'S ME</h3>
           <h1 class="display-3 fw-bold mb-3 text-pop-up-top" style="font-family: JujutsuKaisen">KAFKA FAREL</h1>
-          <span class="fs-4 mb-4 text-primary fw-bold text text-first">I AM</span>
-          <span class="fs-4 mb-4 fw-bold text-danger text text-second">FREELANCE</span>
+          <span class="fs-4 mb-4 text-primary fw-bold text-text text-first">I AM</span>
+          <span class="fs-4 mb-4 fw-bold text-danger text-text text-second">FREELANCE</span>
           <h3 class="fs-4 mb-4 fw-bold">AND I AM INFORMATIKA STUDENT</h3>
         </div>
         <div class="col-lg-6 text-center mt-4 mt-lg-0 slide-in-fwd-right">
@@ -137,13 +137,13 @@
     </div>
 
     <!-- skill section -->
-    <div class="container-fluid" id="skills" style="min-height: 100vh">
-      <div class="row justify-content-around">
-        <div class="col-10 col-sm-8 col-md-6 col-lg-5 d-flex align-items-center justify-content-center mt-5">
+    <div class="container-fluid" id="skills" style="min-height: 10vh">
+      <div class="row d-flex justify-content-center">
+        <div class="col-10 col-xs-8 col-sm-8 col-md-6 d-flex align-items-center justify-content-center mt-5">
           <div id="carouselExample" class="carousel slide bg-transparent glow-card" data-bs-ride="carousel" style="max-width: 18rem; margin: auto">
             <div class="carousel-inner skillsection">
               <div class="carousel-item active text-center">
-                <div class="card bg-transparent warna border-0 text-center mx-auto" style="width: 100%; max-width: 18rem">
+                <div class="warna border-0 text-center mx-auto" style="width: 100%; max-width: 18rem">
                   <img src="logo-html-5-2048.png" class="card-img-top img-fluid" alt="HTML Logo" />
                   <div class="card-body">
                     <h5 class="card-title" style="font-family: 'JujutsuKaisen', sans-serif">HTML</h5>
@@ -157,7 +157,7 @@
                 </div>
               </div>
               <div class="carousel-item text-center">
-                <div class="card bg-transparent warna border-0" style="width: 100%; margin: auto">
+                <div class="bg-transparent warna border-0" style="width: 100%; margin: auto">
                   <img src="logo-css-3-1024.png" class="card-img-top" alt="CSS Logo" />
                   <div class="card-body">
                     <h5 class="card-title" style="font-family: jujutsukaisen">CSS</h5>
@@ -171,7 +171,7 @@
                 </div>
               </div>
               <div class="carousel-item text-center">
-                <div class="card bg-transparent warna border-0" style="width: 100%; margin: auto">
+                <div class="bg-transparent warna border-0" style="width: 100%; margin: auto">
                   <img src="JavaScript-logo.png" class="card-img-top" alt="JavaScript Logo" />
                   <div class="card-body">
                     <h5 class="card-title" style="font-family: jujutsukaisen">JAVASCRIPT</h5>
@@ -185,7 +185,7 @@
                 </div>
               </div>
               <div class="carousel-item text-center">
-                <div class="card bg-transparent warna border-0" style="width: 100%; margin: auto">
+                <div class="bg-transparent warna border-0" style="width: 100%; margin: auto">
                   <img src="bootstrap-logo.png" class="card-img-top" alt="Bootstrap Logo" />
                   <div class="card-body">
                     <h5 class="card-title" style="font-family: jujutsukaisen">BOOTSTRAP</h5>
@@ -199,7 +199,7 @@
                 </div>
               </div>
               <div class="carousel-item text-center">
-                <div class="card bg-transparent warna border-0" style="width: 100%; margin: auto">
+                <div class="bg-transparent warna border-0" style="width: 100%; margin: auto">
                   <img src="Tailwind_CSS_Logo.svg.png" class="card-img-top" style="height: 15rem" alt="Tailwind Logo" />
                   <div class="card-body">
                     <h5 class="card-title mt-5" style="font-family: jujutsukaisen">TAILWIND</h5>
@@ -223,80 +223,72 @@
             </button>
           </div>
         </div>
-        <div class="col-10 col-sm-8 col-md-6 col-lg-5 d-flex flex-wrap align-items-center justify-content-center kotakskill">
+        <div class="col-10 col-sm-8 col-md-6 d-flex flex-wrap align-items-center justify-content-center kotakskill mt-5">
           <div class="row mt-4 justify-content-center">
-            <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
-              <div class="bungkus">
-                <div class="card border border-danger rounded-5">
-                  <div class="box">
-                    <div class="percent">
-                      <svg>
-                        <circle cx="70" cy="70" r="70"></circle>
-                        <circle id="circle1" cx="70" cy="70" r="70"></circle>
-                      </svg>
-                      <div class="num">
-                        <h2>82<span>%</span></h2>
-                      </div>
+            <div class="col-12 col-xs-8 col-sm-8 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+              <div class="card border border-danger rounded-5">
+                <div class="box">
+                  <div class="percent">
+                    <svg>
+                      <circle cx="70" cy="70" r="70"></circle>
+                      <circle id="circle1" cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="num">
+                      <h2>82<span>%</span></h2>
                     </div>
-                    <h2 class="text">creative</h2>
                   </div>
-                  <div class="mt-2 softskill">
-                    <button type="button" class="btn btn-outline-danger" onclick="creative()">MORE</button>
-                  </div>
-                  <div class="balik">
-                    <button type="button" class="btn btn-outline-danger" onclick="pulang()">BACK</button>
-                  </div>
+                  <h2 class="text">creative</h2>
                 </div>
-              </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
-              <div class="bungkus">
-                <div class="card border border-danger rounded-5">
-                  <div class="box">
-                    <div class="percent">
-                      <svg>
-                        <circle cx="70" cy="70" r="70"></circle>
-                        <circle id="circle2" cx="70" cy="70" r="70"></circle>
-                      </svg>
-                      <div class="num">
-                        <h2>73<span>%</span></h2>
-                      </div>
-                    </div>
-                    <h2 class="text">public speaking</h2>
-                  </div>
-                  <div class="mt-2 softskill">
-                    <button type="button" class="btn btn-outline-danger" onclick="public()">MORE</button>
-                  </div>
-                  <div class="balik">
-                    <button type="button" class="btn btn-outline-danger" onclick="pulang()">BACK</button>
-                  </div>
+                <div class="mt-2 softskill">
+                  <button type="button" class="btn btn-outline-danger" onclick="creative()">MORE</button>
+                </div>
+                <div class="balik">
+                  <button type="button" class="btn btn-outline-danger" onclick="pulang()">BACK</button>
                 </div>
               </div>
             </div>
 
-            <!-- Card 3 -->
             <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
-              <div class="bungkus">
-                <div class="card border border-danger rounded-5">
-                  <div class="box">
-                    <div class="percent">
-                      <svg>
-                        <circle cx="70" cy="70" r="70"></circle>
-                        <circle id="circle3" cx="70" cy="70" r="70"></circle>
-                      </svg>
-                      <div class="num">
-                        <h2>80<span>%</span></h2>
-                      </div>
+              <div class="card border border-danger rounded-5">
+                <div class="box">
+                  <div class="percent">
+                    <svg>
+                      <circle cx="70" cy="70" r="70"></circle>
+                      <circle id="circle2" cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="num">
+                      <h2>73<span>%</span></h2>
                     </div>
-                    <h2 class="text">communication</h2>
                   </div>
-                  <div class="mt-2 softskill">
-                    <button type="button" class="btn btn-outline-danger" onclick="komunikasi()">MORE</button>
+                  <h2 class="text">public speaking</h2>
+                </div>
+                <div class="mt-2 softskill">
+                  <button type="button" class="btn btn-outline-danger" onclick="public()">MORE</button>
+                </div>
+                <div class="balik">
+                  <button type="button" class="btn btn-outline-danger" onclick="pulang()">BACK</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
+              <div class="card border border-danger rounded-5">
+                <div class="box">
+                  <div class="percent">
+                    <svg>
+                      <circle cx="70" cy="70" r="70"></circle>
+                      <circle id="circle3" cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="num">
+                      <h2>83<span>%</span></h2>
+                    </div>
                   </div>
-                  <div class="balik">
-                    <button type="button" class="btn btn-outline-danger" onclick="pulang()">BACK</button>
-                  </div>
+                  <h2 class="text">communication</h2>
+                </div>
+                <div class="mt-2 softskill">
+                  <button type="button" class="btn btn-outline-danger" onclick="komunikasi()">MORE</button>
+                </div>
+                <div class="balik">
+                  <button type="button" class="btn btn-outline-danger" onclick="pulang()">BACK</button>
                 </div>
               </div>
             </div>
