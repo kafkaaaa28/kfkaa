@@ -1,6 +1,7 @@
 window.onload = function () {
   window.scrollTo(0, 0);
 };
+
 function nama() {
   let h1 = document.getElementById('h1');
   let inputnama = document.getElementById('inputnama').value;
@@ -16,7 +17,7 @@ function nama() {
 const text = document.querySelector('.text-second');
 const textLoad = () => {
   setTimeout(() => {
-    text.textContent = 'FREELANCE   ';
+    text.textContent = 'FREELANCE';
   }, 0);
   setTimeout(() => {
     text.textContent = 'STUDENT';
@@ -25,12 +26,25 @@ const textLoad = () => {
     text.textContent = 'JUNIOR DEVELOPER';
   }, 8000);
 };
+
 textLoad();
 setInterval(textLoad, 12000);
 function mode() {
   let body = document.body;
   body.classList.toggle('dark-mode');
 }
+// ilang section //
+
+const ilang = document.querySelector('.skillsection');
+ilang.style.display = 'none';
+
+const cardcreative = document.querySelector('.card-creative');
+cardcreative.style.display = 'none';
+
+const cardpublic = document.querySelector('.card-public');
+cardpublic.style.display = 'none';
+
+// end ilang //
 
 // SKILLL SECTION //
 
