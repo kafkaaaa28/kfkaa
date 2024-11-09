@@ -33,6 +33,18 @@ function mode() {
   let body = document.body;
   body.classList.toggle('dark-mode');
 }
+// ilang section //
+
+const ilang = document.querySelector('.skillsection');
+ilang.style.display = 'none';
+
+const cardcreative = document.querySelector('.card-creative');
+cardcreative.style.display = 'none';
+
+const cardpublic = document.querySelector('.card-public');
+cardpublic.style.display = 'none';
+
+// end ilang //
 
 // SKILLL SECTION //
 
