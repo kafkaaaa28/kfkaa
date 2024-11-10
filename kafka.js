@@ -34,9 +34,26 @@ function mode() {
   body.classList.toggle('dark-mode');
 }
 // ilang section //
+const cardhtml = document.querySelector('.ht-ml');
+cardhtml.style.display = 'none';
+
+const cardcss = document.querySelector('.cs-s');
+cardcss.style.display = 'none';
+
+const cardjs = document.querySelector('.java-script');
+cardjs.style.display = 'none';
+
+const cardbs = document.querySelector('.boot-strap');
+cardbs.style.display = 'none';
+
+const cardtailwind = document.querySelector('.tail-wind');
+cardtailwind.style.display = 'none';
+
+const kirikanan = document.getElementById('kirikanan');
+const kemampuan = document.querySelector('.kemampuan');
 
 const ilang = document.querySelector('.skillsection');
-ilang.style.display = 'none';
+ilang.style.display = 'block';
 
 const cardcreative = document.querySelector('.card-creative');
 cardcreative.style.display = 'none';
@@ -44,11 +61,18 @@ cardcreative.style.display = 'none';
 const cardpublic = document.querySelector('.card-public');
 cardpublic.style.display = 'none';
 
+const cardkomunikasi = document.querySelector('.card-komunikasi');
+cardkomunikasi.style.display = 'none';
 // end ilang //
 
 // SKILLL SECTION //
 
 function kembali() {
+  const cardhtml = document.querySelector('.ht-ml');
+  cardhtml.classList.add('text-blur-out');
+  setTimeout(() => {
+    cardhtml.style.display = 'none';
+  }, 1000);
   const back = document.querySelectorAll('.back');
   for (let i = 0; i < back.length; i++) {
     back[i].classList.add('text-blur-out');
@@ -77,6 +101,11 @@ function kembali() {
 }
 
 function html() {
+  cardhtml.classList.add('text-focus-in');
+  setTimeout(() => {
+    cardhtml.style.display = 'block';
+  }, 1000);
+
   const more = document.querySelectorAll('.more');
   for (let i = 0; i < more.length; i++) {
     more[i].classList.add('text-blur-out');
@@ -219,11 +248,27 @@ for (let i = 0; i < balik.length; i++) {
 }
 
 function pulang() {
+  cardcreative.classList.add('text-blur-out');
+  setTimeout(() => {
+    cardcreative.style.display = 'none';
+  }, 1000);
+
+  cardpublic.classList.add('text-blur-out');
+  setTimeout(() => {
+    cardpublic.style.display = 'none';
+  }, 1000);
+
+  cardkomunikasi.classList.add('text-blur-out');
+  setTimeout(() => {
+    cardkomunikasi.style.display = 'none';
+  }, 1000);
+
   const skillsection = document.querySelectorAll('.skillsection');
   for (let i = 0; i < skillsection.length; i++) {
     skillsection[i].classList.remove('text-blur-out');
     skillsection[i].classList.add('text-focus-in');
     setTimeout(() => {
+      kirikanan.style.display = 'block';
       skillsection[i].style.display = 'block';
     }, 1000);
   }
@@ -244,10 +289,19 @@ function pulang() {
   }
 }
 function creative() {
+  cardcreative.classList.remove('text-blur-out');
+  cardcreative.classList.add('text-focus-in');
+  setTimeout(() => {
+    kemampuan.style.width = '100%';
+    kemampuan.classList.add('tengah');
+    cardcreative.style.display = 'block';
+  }, 1000);
+
   const skillsection = document.querySelectorAll('.skillsection');
   for (let i = 0; i < skillsection.length; i++) {
     skillsection[i].classList.add('text-blur-out');
     setTimeout(() => {
+      kirikanan.style.display = 'none';
       skillsection[i].style.display = 'none';
     }, 1000);
   }
@@ -268,10 +322,19 @@ function creative() {
   }
 }
 function public() {
+  cardpublic.classList.remove('text-blur-out');
+  cardpublic.classList.add('text-focus-in');
+  setTimeout(() => {
+    kemampuan.style.width = '100%';
+    kemampuan.classList.add('tengah');
+    cardpublic.style.display = 'block';
+  }, 1000);
+
   const skillsection = document.querySelectorAll('.skillsection');
   for (let i = 0; i < skillsection.length; i++) {
     skillsection[i].classList.add('text-blur-out');
     setTimeout(() => {
+      kirikanan.style.display = 'none';
       skillsection[i].style.display = 'none';
     }, 1000);
   }
@@ -292,10 +355,20 @@ function public() {
   }
 }
 function komunikasi() {
+  cardkomunikasi.classList.remove('text-blur-out');
+  cardkomunikasi.classList.add('text-focus-in');
+  setTimeout(() => {
+    kemampuan.style.width = '100%';
+    kemampuan.classList.add('tengah');
+    cardkomunikasi.style.display = 'block';
+  }, 1000);
+
   const skillsection = document.querySelectorAll('.skillsection');
   for (let i = 0; i < skillsection.length; i++) {
     skillsection[i].classList.add('text-blur-out');
     setTimeout(() => {
+      kirikanan.style.display = 'none';
+
       skillsection[i].style.display = 'none';
     }, 1000);
   }
