@@ -1,6 +1,6 @@
-window.onload = function () {
-  window.scrollTo(0, 0);
-};
+// window.onload = function () {
+//   window.scrollTo(0, 0);
+// };
 
 function nama() {
   let h1 = document.getElementById('h1');
@@ -34,6 +34,7 @@ function mode() {
   body.classList.toggle('dark-mode');
 }
 // ilang section //
+
 const cardhtml = document.querySelector('.ht-ml');
 cardhtml.style.display = 'none';
 
@@ -68,11 +69,31 @@ cardkomunikasi.style.display = 'none';
 // SKILLL SECTION //
 
 function kembali() {
-  const cardhtml = document.querySelector('.ht-ml');
   cardhtml.classList.add('text-blur-out');
   setTimeout(() => {
     cardhtml.style.display = 'none';
   }, 1000);
+
+  cardcss.classList.add('text-blur-out');
+  setTimeout(() => {
+    cardcss.style.display = 'none';
+  }, 1000);
+
+  cardjs.classList.add('text-blur-out');
+  setTimeout(() => {
+    cardjs.style.display = 'none';
+  }, 1000);
+
+  cardbs.classList.add('text-blur-out');
+  setTimeout(() => {
+    cardbs.style.display = 'none';
+  }, 1000);
+
+  cardtailwind.classList.add('text-blur-out');
+  setTimeout(() => {
+    cardtailwind.style.display = 'none';
+  }, 1000);
+
   const back = document.querySelectorAll('.back');
   for (let i = 0; i < back.length; i++) {
     back[i].classList.add('text-blur-out');
@@ -80,16 +101,19 @@ function kembali() {
       back[i].style.display = 'none';
     }, 1000);
   }
+
   const kotakskill = document.querySelectorAll('.kotakskill');
   for (let i = 0; i < kotakskill.length; i++) {
-    kotakskill[i].style.display = 'flex';
-    kotakskill[i].classList.add('tengah');
     kotakskill[i].classList.remove('text-blur-out');
     kotakskill[i].classList.add('text-focus-in');
     setTimeout(() => {
+      kotakskill[i].classList.add('tengah1');
+      kotakskill[i].style.width = '90%';
+      kotakskill[i].classList.add('d-flex', 'flex-wrap', 'justify-content-center');
       kotakskill[i].style.display = 'block';
     }, 1000);
   }
+
   const more = document.querySelectorAll('.more');
   for (let i = 0; i < more.length; i++) {
     more[i].classList.remove('text-blur-out');
@@ -101,10 +125,13 @@ function kembali() {
 }
 
 function html() {
+  cardhtml.classList.remove('text-blur-out');
   cardhtml.classList.add('text-focus-in');
   setTimeout(() => {
+    cardhtml.style.display = 'flex';
+    cardhtml.classList.add('tengah');
     cardhtml.style.display = 'block';
-  }, 1000);
+  }, 1500);
 
   const more = document.querySelectorAll('.more');
   for (let i = 0; i < more.length; i++) {
@@ -115,6 +142,7 @@ function html() {
   for (let i = 0; i < kotakskill.length; i++) {
     kotakskill[i].classList.add('text-blur-out');
     setTimeout(() => {
+      kotakskill[i].classList.remove('d-flex', 'flex-wrap', 'justify-content-center');
       kotakskill[i].style.display = 'none';
     }, 1000);
   }
@@ -139,35 +167,50 @@ function css() {
   for (let i = 0; i < more.length; i++) {
     more[i].classList.add('text-blur-out');
   }
+  cardcss.classList.remove('text-blur-out');
+  cardcss.classList.add('text-focus-in');
+  setTimeout(() => {
+    cardcss.style.display = 'flex';
+    cardcss.classList.add('tengah');
+    cardcss.style.display = 'block';
+  }, 1500);
 
   const kotakskill = document.querySelectorAll('.kotakskill');
   for (let i = 0; i < kotakskill.length; i++) {
     kotakskill[i].classList.add('text-blur-out');
     setTimeout(() => {
+      kotakskill[i].classList.remove('d-flex', 'flex-wrap', 'justify-content-center');
       kotakskill[i].style.display = 'none';
     }, 1000);
-  }
 
-  const back = document.querySelectorAll('.back');
-  for (let i = 0; i < back.length; i++) {
-    back[i].classList.remove('text-blur-out');
-    back[i].classList.add('text-focus-in');
-    setTimeout(() => {
-      back[i].style.display = 'block';
-    }, 1000);
+    const back = document.querySelectorAll('.back');
+    for (let i = 0; i < back.length; i++) {
+      back[i].classList.remove('text-blur-out');
+      back[i].classList.add('text-focus-in');
+      setTimeout(() => {
+        back[i].style.display = 'block';
+      }, 1000);
+    }
   }
 }
-
 function javascript() {
   const more = document.querySelectorAll('.more');
   for (let i = 0; i < more.length; i++) {
     more[i].classList.add('text-blur-out');
   }
+  cardjs.classList.remove('text-blur-out');
+  cardjs.classList.add('text-focus-in');
+  setTimeout(() => {
+    cardjs.style.display = 'flex';
+    cardjs.classList.add('tengah');
+    cardjs.style.display = 'block';
+  }, 1500);
 
   const kotakskill = document.querySelectorAll('.kotakskill');
   for (let i = 0; i < kotakskill.length; i++) {
     kotakskill[i].classList.add('text-blur-out');
     setTimeout(() => {
+      kotakskill[i].classList.remove('d-flex', 'flex-wrap', 'justify-content-center');
       kotakskill[i].style.display = 'none';
     }, 1000);
   }
@@ -188,10 +231,19 @@ function bt() {
     more[i].classList.add('text-blur-out');
   }
 
+  cardbs.classList.remove('text-blur-out');
+  cardbs.classList.add('text-focus-in');
+  setTimeout(() => {
+    cardbs.style.display = 'flex';
+    cardbs.classList.add('tengah');
+    cardbs.style.display = 'block';
+  }, 1500);
+
   const kotakskill = document.querySelectorAll('.kotakskill');
   for (let i = 0; i < kotakskill.length; i++) {
     kotakskill[i].classList.add('text-blur-out');
     setTimeout(() => {
+      kotakskill[i].classList.remove('d-flex', 'flex-wrap', 'justify-content-center');
       kotakskill[i].style.display = 'none';
     }, 1000);
   }
@@ -212,10 +264,19 @@ function tailwind() {
     more[i].classList.add('text-blur-out');
   }
 
+  cardtailwind.classList.remove('text-blur-out');
+  cardtailwind.classList.add('text-focus-in');
+  setTimeout(() => {
+    cardtailwind.style.display = 'flex';
+    cardtailwind.classList.add('tengah');
+    cardtailwind.style.display = 'block';
+  }, 1500);
+
   const kotakskill = document.querySelectorAll('.kotakskill');
   for (let i = 0; i < kotakskill.length; i++) {
     kotakskill[i].classList.add('text-blur-out');
     setTimeout(() => {
+      kotakskill[i].classList.remove('d-flex', 'flex-wrap', 'justify-content-center');
       kotakskill[i].style.display = 'none';
     }, 1000);
   }
