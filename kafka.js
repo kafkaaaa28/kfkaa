@@ -4,13 +4,21 @@
 
 function nama() {
   let h1 = document.getElementById('h1');
-  let inputnama = document.getElementById('inputnama').value;
+  let inputnama = document.getElementById('inputnama').value.trim();
 
+  if (inputnama == '') {
+    var myModal = new bootstrap.Modal(document.getElementById('customAlert'));
+    myModal.show();
+    h1.style.display = 'none';
+    return;
+  }
+
+  h1.style.display = 'block';
   h1.classList.remove('text-focus-in');
 
   setTimeout(() => {
     h1.classList.add('text-focus-in');
-    h1.innerHTML = `HALO ${inputnama} SELAMAT DATANG DI WEB SAYA`;
+    h1.innerHTML = `HALO ${inputnama.toUpperCase()} SELAMAT DATANG DI WEB SAYA`;
   }, 10);
 }
 
