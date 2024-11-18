@@ -9,7 +9,7 @@ html {
 }
 body {
   transition: background-color 1s ease;
-  background-color: #808080;
+  background-color: rgb(199, 199, 199);
   color: black;
 }
 .dark-mode {
@@ -24,12 +24,12 @@ body {
 }
 .bg-jepang {
   background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(128, 128, 128, 1) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgb(199, 199, 199) 100%);
 }
 .bg-jepang2 {
   transition: background-color 1s ease;
-  background: rgb(128, 128, 128);
-  background: linear-gradient(0deg, rgba(128, 128, 128, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: rgb(199, 199, 199);
+  background: linear-gradient(0deg, rgb(199, 199, 199) 0%, rgba(0, 0, 0, 1) 100%);
 }
 .dark-mode .text-about {
   color: black;
@@ -38,18 +38,117 @@ body {
 }
 .dark-mode .bg-jepang {
   transition: background-color 1s ease;
-  background: rgb(128, 128, 128);
-  background: linear-gradient(0deg, rgba(128, 128, 128, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: rgb(199, 199, 199);
+  background: linear-gradient(0deg, rgb(199, 199, 199) 0%, rgba(0, 0, 0, 1) 100%);
 }
 .dark-mode .bg-jepang2 {
   background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(128, 128, 128, 1) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgb(199, 199, 199, 1) 100%);
 }
+.text-nyala {
+  font-family: 'Liberty';
+  font-weight: 100;
+  font-size: 4rem;
+  letter-spacing: -0.25em;
+  flex-flow: row;
+  white-space: nowrap;
+}
+
+.letter {
+  color: #020202;
+  display: inline-block;
+  text-shadow: 1rem 0 5rem #000000;
+}
+.dark-mode .letter {
+  text-shadow: 1rem 0 5rem #fcfcfc;
+
+  color: white;
+}
+.text-span {
+  color: red;
+  text-shadow: 1rem 0 5rem #ff0000;
+}
+.dark-mode .text-span {
+  color: red;
+  text-shadow: 1rem 0 5rem #ff0000;
+}
+.letter-2 {
+  transform: translate(-0.2rem, 1rem) rotate(10deg);
+  animation: flicker 2s ease-in-out infinite alternate;
+}
+.letter-text {
+  color: white;
+  text-shadow: 1rem 0 5rem #000000;
+}
+.dark-mode .letter-text {
+  color: black;
+  text-shadow: 1rem 0 5rem #fcfcfc;
+}
+@media (max-width: 768px) {
+  .text-nyala {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-nyala {
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+
+  5% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+
+  5.5% {
+    opacity: 0;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+
+  6% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+
+  6.5% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+
+  7% {
+    opacity: 0;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+
+  8% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(13deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-0.2rem, 1rem) rotate(10deg);
+  }
+}
+
 .bg-about {
   background-color: black;
+  transition: background-color 1s ease;
 }
 .dark-mode .bg-about {
-  background-color: #808080;
+  background-color: rgb(199, 199, 199);
 }
 .dark-mode button a {
   color: white; /* Warna teks tombol untuk dark mode */
@@ -86,7 +185,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: gray;
+  background-color: rgb(199, 199, 199);
   border-left: 2px solid red;
   transition: background-color 1s ease;
   animation: animate 4s steps(12) infinite;
@@ -102,8 +201,13 @@ body {
 }
 @font-face {
   font-family: 'JujutsuKaisen';
-  src: url('Qetod.ttf') format('truetype'); /* Ganti dengan path ke file font Anda */
+  src: url('Qetod.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Liberty';
+  src: url('liberty.otf') format('truetype');
+}
+
 .porto {
   list-style: none;
   padding: 0;
@@ -497,7 +601,7 @@ ul:hover button:hover ~ button:before {
 .glow-card {
   transition: transform 1s ease;
   position: relative;
-  filter: drop-shadow(20px 10px 26px #fdfdfd);
+  filter: drop-shadow(20px 10px 26px #000000);
 }
 .dark-mode .glow-card {
   filter: drop-shadow(20px 15px 26px #ff0000);
@@ -627,7 +731,7 @@ ul:hover button:hover ~ button:before {
   transition: 0.5s;
 }
 .card {
-  filter: drop-shadow(20px 15px 26px #f4f4f4);
+  filter: drop-shadow(20px 15px 26px #000000);
 }
 .dark-mode .card {
   filter: drop-shadow(20px 15px 26px #ff0000);
@@ -727,4 +831,35 @@ svg circle:nth-child(2) {
 }
 .dark-mode .serti-glow:hover {
   filter: drop-shadow(20px 15px 26px #0004ff);
+}
+.maps {
+  transition: transform 0.5s ease;
+  filter: drop-shadow(20px 15px 26px #fd0000);
+}
+.dark-mode .maps {
+  filter: drop-shadow(20px 15px 26px #0e0e0e);
+}
+.maps:hover {
+  filter: drop-shadow(20px 15px 26px #fd0000);
+  transform: scale(1.05);
+}
+.btn-instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+  border: none;
+}
+.btn-instagram:hover {
+  opacity: 0.9;
+}
+.btn-custom {
+  transition: 0.5s;
+  filter: drop-shadow(20px 15px 26px #fd0000);
+}
+.btn-custom:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(255, 1, 1, 0.5);
+  color: #000;
+}
+.dark-mode .btn-custom {
+  filter: drop-shadow(20px 15px 26px #000000);
 }
