@@ -3,6 +3,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  /* border: 1px solid red !important; */
 }
 html {
   scroll-behavior: smooth;
@@ -12,6 +13,10 @@ body {
   background-color: rgb(199, 199, 199);
   color: black;
 }
+[data-aos] {
+  width: auto; /* Pastikan lebar tidak berubah */
+}
+
 .dark-mode {
   background-color: #000000; /* Warna latar belakang untuk dark mode */
   color: white; /* Warna teks untuk dark mode */
@@ -86,13 +91,13 @@ body {
 }
 @media (max-width: 768px) {
   .text-nyala {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 
 @media (max-width: 576px) {
   .text-nyala {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 }
 

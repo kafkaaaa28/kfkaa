@@ -7,6 +7,7 @@
     <title>KAFKA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
@@ -21,7 +22,7 @@
         <div class="flex-grow-1 d-flex justify-content-center">
           <button class="fw-bold fs-1 bg-transparent border border-0 pulsate-bck" style="font-family: jujutsukaisen" onclick="mode()">JUJUTSU KAISEN</button>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -42,7 +43,7 @@
               <img class="me-2 rounded-circle" width="30" height="30" style="vertical-align: middle" src="kontak.jpeg" />
               <a class="nav-link fw-bold button-text" href="#kontak" style="vertical-align: middle; font-family: jujutsukaisen">CONTACT</a>
             </button>
-            <!-- <button class="nav-item d-flex align-items-center bg-transparent border border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">CHATBOT</button> -->
+            <!-- <button class="nav-item d-flex align-items-center bg-transparent border border-0" type="button"   aria-controls="offcanvasExample">CHATBOT</button> -->
           </ul>
         </div>
       </div>
@@ -61,17 +62,17 @@
         </div>
         <div id="customAlert" class="modal fade" tabindex="-1" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+            <div class="modal-content text-dark">
               <div class="modal-header">
                 <h5 class="modal-title">PENTING!!!</h5>
                 <div class="spinner-grow text-danger" role="status"></div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 <p>MASUKKAN NAMA ANDA</p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-secondary">Tutup</button>
               </div>
             </div>
           </div>
@@ -102,11 +103,11 @@
     <!-- About Section -->
     <div class="container-fluid bg-about text-center justify-content-center d-flex align-items-center" id="about" style="min-height: 100vh">
       <div class="row justify-content-around w-100">
-        <div class="col-10 col-xs-8 col-sm-8 col-md-4 glow-border mb-4">
+        <div class="col-10 col-xs-8 col-sm-8 col-md-4 glow-border mb-4" data-aos="fade-right">
           <img src="foto1.jpeg" class="rounded img-fluid foto1-image" alt="Foto 1" />
         </div>
         <div class="col-10 col-xs-8 col-sm-8 col-md-6" id="text">
-          <div style="font-family: jujutsukaisen">
+          <div style="font-family: jujutsukaisen" data-aos="fade-left" data-aos-delay="500">
             <span class="fw-bold fs-2 text-me">ABOUT</span>
             <span class="fw-bold fs-2 text-danger">ME</span>
             <p class="text-uppercase mt-2 fw-bold font-monospace text-about text-sm">
@@ -114,7 +115,7 @@
               university. my main expertise as a junior front end developer. for now i live in bandung city. i am the second child of 2 siblings.
             </p>
           </div>
-          <div>
+          <div data-aos="fade-up " data-aos-delay="400">
             <img src="geto.png" class="img-fluid geto-image" />
           </div>
         </div>
@@ -131,21 +132,22 @@
 
     <!-- skill section -->
     <div class="container-fluid" id="skills" style="min-height: 10vh; background-attachment: fixed">
-      <div class="text-center mt-2">
+      <div class="text-center mt-2" data-aos="fade-down" data-aos-delay="500">
         <h1 class="text-nyala fw-bold">
-          <span class="letter letter-1">M</span>
-          <span class="letter letter-1">Y</span>
-          <span class="letter letter-2 text-span">S</span>
-          <span class="letter letter-3">K</span>
-          <span class="letter letter-4">I</span>
-          <span class="letter letter-4">I</span>
-          <span class="letter letter-4">L</span>
-          <span class="letter letter-4">S</span>
+          <span class="letter letter-1" data-aos="fade-right" data-aos-delay="100">M</span>
+          <span class="letter letter-1" data-aos="fade-right" data-aos-delay="200">Y</span>
+          <span class="letter letter-2 text-span" data-aos="fade-up" data-aos-delay="300">S</span>
+          <span class="letter letter-3" data-aos="fade-left" data-aos-delay="400">K</span>
+          <span class="letter letter-4" data-aos="fade-left" data-aos-delay="500">I</span>
+          <span class="letter letter-4" data-aos="fade-left" data-aos-delay="600">I</span>
+          <span class="letter letter-4" data-aos="fade-left" data-aos-delay="700">L</span>
+          <span class="letter letter-4" data-aos="fade-left" data-aos-delay="800">S</span>
         </h1>
       </div>
+
       <div class="row d-flex justify-content-center">
         <div class="col-10 col-xs-8 col-sm-8 col-md-6 mt-5">
-          <div id="carouselExample" class="carousel slide bg-transparent glow-card" data-bs-ride="carousel" style="max-width: 18rem; margin: auto">
+          <div id="carouselExample" class="carousel slide bg-transparent glow-card" style="max-width: 18rem; margin: auto" data-aos="zoom-in" data-aos-delay="700">
             <div class="carousel-inner skillsection">
               <div class="carousel-item active text-center">
                 <div class="warna border-0 text-center mx-auto" style="width: 100%; max-width: 18rem">
@@ -219,11 +221,11 @@
               </div>
             </div>
             <div id="kirikanan">
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <button class="carousel-control-prev" type="button">
                 <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
                 <span class="visually-hidden">LEFT</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <button class="carousel-control-next" type="button">
                 <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
@@ -235,8 +237,8 @@
               <div class="card-body">
                 <div style="text-align: center; font-family: jujutsukaisen" class="fw-bold mb-2"><span>CREA</span><span class="text-danger">TIVE</span></div>
                 <p class="card-text text-uppercase fw-bold" style="text-align: justify">
-                  "My friends often see me as a creative person because I always find new ways to solve problems. For example, in a college project, I found a different data visualization method to make the presentation more interesting and
-                  understandable. This creativity helps me provide fresh ideas that enrich the team's work."
+                  "My friends often see me as a creative person because I always find new ways to solve problems. For example, in a college project, I found a different the presentation more interesting and understandable. This creativity
+                  helps me provide fresh ideas that enrich the team's work."
                 </p>
               </div>
             </div>
@@ -265,7 +267,7 @@
         <div class="col-10 col-sm-8 col-md-6 d-flex flex-wrap align-items-center justify-content-center mt-5">
           <div class="row mt-4 kotakskill">
             <div class="col-12 col-xs-8 col-sm-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
-              <div class="card border border-danger rounded-5">
+              <div class="card border border-danger rounded-5" data-aos="fade-up" data-aos-delay="500">
                 <div class="box">
                   <div class="percent">
                     <svg>
@@ -288,7 +290,7 @@
             </div>
 
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center">
-              <div class="card border border-danger rounded-5">
+              <div class="card border border-danger rounded-5" data-aos="fade-down" data-aos-delay="800">
                 <div class="box">
                   <div class="percent">
                     <svg>
@@ -310,7 +312,7 @@
               </div>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-4 mb-4 d-flex justify-content-center">
-              <div class="card border border-danger rounded-5">
+              <div class="card border border-danger rounded-5" data-aos="fade-up" data-aos-delay="1000">
                 <div class="box">
                   <div class="percent">
                     <svg>
@@ -449,20 +451,21 @@
     <div class="container-fluid bg-about text-center" style="min-height: 100vh; background-attachment: fixed" id="kontak">
       <div class="text-center">
         <h1 class="text-nyala text-light fw-bold">
-          <span class="letter-text letter-1">M</span>
-          <span class="letter-text letter-1">Y</span>
-          <span class="letter letter-2 text-span">C</span>
-          <span class="letter-text letter-3">O</span>
-          <span class="letter-text letter-4">N</span>
-          <span class="letter-text letter-4">T</span>
-          <span class="letter-text letter-4">A</span>
-          <span class="letter-text letter-4">C</span>
-          <span class="letter-text letter-4">T</span>
+          <span class="letter-text letter-1" data-aos="fade-up" data-aos-delay="100">M</span>
+          <span class="letter-text letter-1" data-aos="fade-up" data-aos-delay="200">Y</span>
+          <span class="letter letter-2 text-span" data-aos="fade-up" data-aos-delay="300">C</span>
+          <span class="letter-text letter-3" data-aos="fade-up" data-aos-delay="400">O</span>
+          <span class="letter-text letter-4" data-aos="fade-up" data-aos-delay="500">N</span>
+          <span class="letter-text letter-4" data-aos="fade-up" data-aos-delay="600">T</span>
+          <span class="letter-text letter-4" data-aos="fade-up" data-aos-delay="700">A</span>
+          <span class="letter-text letter-4" data-aos="fade-up" data-aos-delay="800">C</span>
+          <span class="letter-text letter-4" data-aos="fade-up" data-aos-delay="900">T</span>
         </h1>
       </div>
+
       <div class="row d-flex justify-content-center align-items-center w-100 h-100 mt-6">
         <div class="col-10 col-lg-6 col-md-6 col-sm-8 d-flex justify-content-center align-items-center">
-          <div class="w-100">
+          <div class="w-100" data-aos="fade-down-right" data-aos-delay="900">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d350.1423789939285!2d107.62272302739503!3d-6.841494592933404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e0d5eada77e3%3A0xa9e84229aa330076!2sJl.%20Baru%20Laksana%20No.57%2C%20Pagerwangi%2C%20Kec.%20Lembang%2C%20Kabupaten%20Bandung%20Barat%2C%20Jawa%20Barat%2040391!5e0!3m2!1sid!2sid!4v1731908939388!5m2!1sid!2sid"
               style="border: 0; height: 300px"
@@ -474,13 +477,13 @@
           </div>
         </div>
         <div class="col-10 col-lg-6 col-md-6 col-sm-8 mt-3">
-          <div>
+          <div data-aos="fade-right" data-aos-delay="500">
             <a href="https://wa.me/62895342305487" target="_blank" class="btn btn-success btn-custom w-50"> <i class="fab fa-whatsapp me-2"></i>WhatsApp</a>
           </div>
-          <div class="mt-3">
+          <div class="mt-3" data-aos="zoom-out-right" data-aos-delay="800">
             <a href="https://www.instagram.com/kfkafrl_" target="_blank" class="btn btn-instagram btn-custom w-50"> <i class="fab fa-instagram me-2"></i>Instagram </a>
           </div>
-          <div class="mt-3">
+          <div class="mt-3" data-aos="zoom-out-right" data-aos-delay="1000">
             <a href="https://github.com/kafkaaaa28" target="_blank" class="btn btn-dark btn-custom w-50"> <i class="fa-brands fa-github me-2"></i>git-hub</a>
           </div>
           <div class="mt-3">
@@ -492,5 +495,9 @@
 
     <script src="kafka.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
