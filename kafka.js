@@ -18,7 +18,7 @@ function nama() {
 
   setTimeout(() => {
     h1.classList.add('text-focus-in');
-    h1.innerHTML = `HALO ${inputnama.toUpperCase()} SELAMAT DATANG DI WEB SAYA`;
+    h1.innerHTML = `HALO ${inputnama.toUpperCase()} SELAMAT DATANG`;
   }, 10);
 }
 
