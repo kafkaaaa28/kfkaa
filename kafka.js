@@ -11,15 +11,19 @@ function nama() {
     myModal.show();
     h1.style.display = 'none';
     return;
+  } else if (inputnama == 'rysa') {
+    setTimeout(() => {
+      h1.classList.add('text-focus-in');
+      h1.innerHTML = `halo ca gmana kuliah nyaa semoga kuat sampai lulus yaa kita pake toga bareng bareng tar kita fotbar`;
+    }, 10);
+  } else {
+    setTimeout(() => {
+      h1.classList.add('text-focus-in');
+      h1.innerHTML = `HALO ${inputnama.toUpperCase()} SELAMAT DATANG`;
+    }, 10);
   }
-
   h1.style.display = 'block';
   h1.classList.remove('text-focus-in');
-
-  setTimeout(() => {
-    h1.classList.add('text-focus-in');
-    h1.innerHTML = `HALO ${inputnama.toUpperCase()} SELAMAT DATANG`;
-  }, 10);
 }
 
 const text = document.querySelector('.text-second');
