@@ -389,8 +389,8 @@ ul:hover button:hover ~ button:before {
   }
 }
 .pulsate-bck {
-  -webkit-animation: pulsate-bck 1s ease-in-out infinite both;
-  animation: pulsate-bck 1s ease-in-out infinite both;
+  -webkit-animation: pulsate-bck 2s ease-in-out infinite both;
+  animation: pulsate-bck 2s ease-in-out infinite both;
 }
 
 @-webkit-keyframes pulsate-bck {
