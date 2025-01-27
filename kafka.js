@@ -11,11 +11,7 @@ function nama() {
     myModal.show();
     h1.style.display = 'none';
     return;
-  } else if (inputnama == 'rysa') {
-    setTimeout(() => {
-      h1.classList.add('text-focus-in');
-      h1.innerHTML = `halo ca gmana kuliah nyaa semoga kuat sampai lulus yaa kita pake toga bareng bareng tar kita fotbar`;
-    }, 10);
+  } 
   } else {
     setTimeout(() => {
       h1.classList.add('text-focus-in');
